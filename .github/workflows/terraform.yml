@@ -28,14 +28,15 @@ jobs:
     - name: Verify Terraform version
       run: terraform --version
     - name: Terraform init
-      uses: hashicorp/setup-terraform@v1
-      with:
-        tf_actions_version: 1.0.2
-        tf_actions_working_dir: "Terraform/"
-        tf_actions_subcommand: 'init'
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#       uses: hashicorp/setup-terraform@v1
+#       with:
+#         tf_actions_version: 1.0.2
+#         tf_actions_working_dir: "Terraform/"
+#         tf_actions_subcommand: 'init'
+#       env:
+#         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      run: terraform init
         
 
 #     # Checks that all Terraform configuration files adhere to a canonical format
